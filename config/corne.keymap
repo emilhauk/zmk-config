@@ -62,7 +62,7 @@
 
            &kp TAB &mt LALT NO_A &mt LSHIFT NO_S &mt LCTRL NO_D &mt LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &mt RGUI NO_J &mt RCTRL NO_K &mt RSHIFT NO_L &kp NO_O_SLASH &kp NO_AE
 
-                                  &mo FNMOVE ESC &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
+                                  &mo FNMOVE &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
 
                                                                   &kp LGUI &mo NUMPAD &kp RET            &kp BSPC &kp NO_SPACE &kp RALT
 
