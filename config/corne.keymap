@@ -46,25 +46,25 @@
         default_layer {
             display-name = "ALPHA";
 
-// -----------------------------------------------------          ---------------------------------------------------
-// |  ESC |   Q   |    W    |   E    |   R    |   T    |          |   Y    |   U   |    I   |    O    |   P   |  Å  |
-// -----------------------------------------------------          ---------------------------------------------------
-// |  TAB |   A   |    S    |   D    |   F    |   G    |          |   H    |   J   |    K   |    L    |   Ø   |  Æ  |
-// |      | _LALT | _LSHIFT | _LCTRL | _LGUI  | _SYMLR |          | _SYMLR | _RGUI | _RCTRL | _RSHIFT | _LALT |     |
-// -----------------------------------------------------          ---------------------------------------------------
-// | MOVE |   Z   |    X    |   C    |    V   |   B    |          |   N    |   M   |    ,   |    .    |   -   |  "  |
-// -----------------------------------------------------          ---------------------------------------------------
-//                          |  GUI   | NUMPAD | ENTER  |          |  BSPC  | SPACE | ALT GR |
-//                          ----------------------------          ---------------------------
+// ----------------------------------------------------          ---------------------------------------------------
+// | ESC |   Q   |    W    |   E    |   R    |   T    |          |   Y    |   U   |    I   |    O    |   P   |  Å  |
+// ----------------------------------------------------          ---------------------------------------------------
+// | TAB |   A   |    S    |   D    |   F    |   G    |          |   H    |   J   |    K   |    L    |   Ø   |  Æ  |
+// |     | _LALT | _LSHIFT | _LCTRL | _LGUI  | _SYMLR |          | _SYMLR | _RGUI | _RCTRL | _RSHIFT | _LALT |     |
+// ----------------------------------------------------          ---------------------------------------------------
+// |     |   Z   |    X    |   C    |    V   |   B    |          |   N    |   M   |    ,   |    .    |   -   |  "  |
+// ----------------------------------------------------          ---------------------------------------------------
+//                         |  MOVE  | NUMPAD | ENTER  |          |  BSPC  | SPACE | ALT GR |
+//                         ----------------------------          ---------------------------
            bindings = <
 
                                          &kp ESC &kp NO_Q &kp NO_W &kp NO_E &kp NO_R &kp NO_T            &kp NO_Y &kp NO_U &kp NO_I &kp NO_O &kp NO_P &kp NO_A_RING
 
            &kp TAB &mt LALT NO_A &mt LSHIFT NO_S &mt LCTRL NO_D &mt LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &mt RGUI NO_J &mt RCTRL NO_K &mt RSHIFT NO_L &kp NO_O_SLASH &kp NO_AE
 
-                                      &mo FNMOVE &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
+                                          &trans &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
 
-                                                                  &kp LGUI &mo NUMPAD &kp RET            &kp BSPC &kp NO_SPACE &kp RALT
+                                                                &mo FNMOVE &mo NUMPAD &kp RET            &kp BSPC &kp NO_SPACE &kp RALT
 
             >;
 
