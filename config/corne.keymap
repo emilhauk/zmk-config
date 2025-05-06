@@ -62,7 +62,7 @@
 
            &kp TAB &mt LALT NO_A &mt LSHIFT NO_S &mt LCTRL NO_D &mt LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &mt RGUI NO_J &mt RCTRL NO_K &mt RSHIFT NO_L &kp NO_O_SLASH &kp NO_AE
 
-                                  &mo FNMOVE &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
+                                      &mo FNMOVE &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &kp NO_DOUBLE_QUOTES
 
                                                                   &kp LGUI &mo NUMPAD &kp RET            &kp BSPC &kp NO_SPACE &kp RALT
 
@@ -99,21 +99,21 @@
             display-name = "SYMBOL";
 
 // -------------------------------------          -------------------------------------
-// | "|" |  !  |  @  |  #  |  $  |  %  |          |  ^  |  &  |  (  |  )  |  =  |  \  |
+// | "|" |  !  |  @  |  #  |  $  |  %  |          |  ^  |  &  |  (  |  )  |  =  |     |
 // -------------------------------------          -------------------------------------
-// |     |     |     |     |     |     |          |     |  +  |  [  |  ]  |  *  |  `  |
+// |     |  \  |  `  |  '  |  ´  |  /  |          |  ~  |  +  |  [  |  ]  |  *  |     |
 // -------------------------------------          -------------------------------------
-// |     |     |     |     |     |     |          |     |  <  |  {  |  }  |  >  |  ~  |
+// |     |     |     |  "  |     |     |          |  ¨  |  <  |  {  |  }  |  >  |     |
 // -------------------------------------          -------------------------------------
 //                   |     |     |     |          |     |     |     |
 //                   -------------------          -------------------
             bindings = <
 
-&kp NO_PIPE &kp NO_EXCL &kp NO_AT &kp NO_HASH &kp NO_DLLR &kp NO_PRCNT                  &kp NO_CARET &kp NO_AMPS &kp NO_LPAR &kp NO_RPAR &kp NO_EQUAL &kp NO_BSLH
+&kp NO_PIPE &kp NO_EXCL &kp NO_AT &kp NO_HASH &kp NO_DLLR &kp NO_PRCNT                  &kp NO_CARET &kp NO_AMPS &kp NO_LPAR &kp NO_RPAR &kp NO_EQUAL &trans
 
-                             &trans &trans &trans &trans &trans &trans                  &trans &kp NO_PLUS &kp NO_LBKT &kp NO_RBKT &kp NO_ASTRK &kp NO_GRAVE
+   &trans &kp NO_BSLH &kp NO_GRAVE &kp NO_SQT &kp NO_ACUTE &kp NO_FSLH                  &kp NO_TILDE &kp NO_PLUS &kp NO_LBKT &kp NO_RBKT &kp NO_ASTRK &trans
 
-                             &trans &trans &trans &trans &trans &trans                  &trans &kp NO_LT &kp NO_LBRC &kp NO_RBRC &kp NO_GT &kp NO_TILDE
+                         &trans &trans &trans &kp NO_DQT &trans &trans                  &kp NO_UMLAUT &kp NO_LT &kp NO_LBRC &kp NO_RBRC &kp NO_GT &trans
 
                                                   &trans &trans &trans                  &trans &trans &trans
 
