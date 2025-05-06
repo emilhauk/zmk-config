@@ -99,7 +99,7 @@
             display-name = "SYMBOL";
 
 // -------------------------------------          -------------------------------------
-// | "|" |  !  |  @  |  #  |  $  |  %  |          |  ^  |  &  |  (  |  )  |  =  |     |
+// | "|" |  !  |  @  |  #  |  $  |  %  |          |  ^  |  &  |  (  |  )  |  =  | DEL |
 // -------------------------------------          -------------------------------------
 // |     |  \  |  `  |  '  |  ´  |  /  |          |  ~  |  +  |  [  |  ]  |  *  |     |
 // -------------------------------------          -------------------------------------
@@ -109,7 +109,7 @@
 //                   -------------------          -------------------
             bindings = <
 
-&kp NO_PIPE &kp NO_EXCL &kp NO_AT &kp NO_HASH &kp NO_DLLR &kp NO_PRCNT                  &kp NO_CARET &kp NO_AMPS &kp NO_LPAR &kp NO_RPAR &kp NO_EQUAL &trans
+&kp NO_PIPE &kp NO_EXCL &kp NO_AT &kp NO_HASH &kp NO_DLLR &kp NO_PRCNT                  &kp NO_CARET &kp NO_AMPS &kp NO_LPAR &kp NO_RPAR &kp NO_EQUAL &kp DEL
 
    &trans &kp NO_BSLH &kp NO_GRAVE &kp NO_SQT &kp NO_ACUTE &kp NO_FSLH                  &kp NO_TILDE &kp NO_PLUS &kp NO_LBKT &kp NO_RBKT &kp NO_ASTRK &trans
 
