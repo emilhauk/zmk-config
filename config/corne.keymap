@@ -75,24 +75,24 @@
         numpad_layer {
             display-name = "NUMPAD";
 
-// --------------------------------------          --------------------------------------
-// |      |     |     |     |     |     |          |     |  7  |  8  |  9  |     |      |
-// --------------------------------------          --------------------------------------
-// |      |     |     |     |     |     |          |     |  4  |  5  |  6  |     |      |
-// --------------------------------------          --------------------------------------
-// |      |     |     |     |     |     |          |     |  1  |  2  |  3  |     |      |
-// --------------------------------------          --------------------------------------
-//                    |     |     |     |          |  0  |     |     |
-//                    -------------------           -------------------
+// -------------------------------------------------          --------------------------------------
+// |      |       |         |        |       |     |          |     |  7  |  8  |  9  |     |      |
+// -------------------------------------------------          --------------------------------------
+// |      | _LALT | _LSHIFT | _LCTRL | _LGUI |     |          |     |  4  |  5  |  6  |     |      |
+// -------------------------------------------------          --------------------------------------
+// |      |       |         |        |       |     |          |     |  1  |  2  |  3  |     |      |
+// -------------------------------------------------          --------------------------------------
+//                          |        |       |     |          |  0  |     |     |
+//                          ------------------------           -------------------
             bindings = <
 
-&trans &trans &trans &trans &trans &trans           &trans &kp NO_N7 &kp NO_N8 &kp NO_N9 &trans &trans
+           &trans &trans &trans &trans &trans &trans           &trans &kp NO_N7 &kp NO_N8 &kp NO_N9 &trans &trans
 
-&trans &trans &trans &trans &trans &trans           &trans &kp NO_N4 &kp NO_N5 &kp NO_N6 &trans &trans
+&trans &mt LALT &mt LSHIFT &mt LCTRL &mt LGUI &trans           &trans &kp NO_N4 &kp NO_N5 &kp NO_N6 &trans &trans
 
-&trans &trans &trans &trans &trans &trans           &trans &kp NO_N1 &kp NO_N2 &kp NO_N3 &trans &trans
+           &trans &trans &trans &trans &trans &trans           &trans &kp NO_N1 &kp NO_N2 &kp NO_N3 &trans &trans
 
-                     &trans &trans &trans           &kp NO_N0 &trans &trans
+                                &trans &trans &trans           &kp NO_N0 &trans &trans
             >;
         };
 
