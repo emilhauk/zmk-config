@@ -15,6 +15,15 @@
 #define FNMOVE 3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_double_shift {
+            timeout-ms = <50>;
+            key-positions = <13 20>; // Position of left shift and right shift
+            bindings = <&kp LSHIFT &kp LSHIFT>;
+        };
+    };
+
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
