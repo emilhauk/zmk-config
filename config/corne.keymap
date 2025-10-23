@@ -13,6 +13,7 @@
 #define NUMPAD 1
 #define SYMBOL 2
 #define FNMOVE 3
+#define SYSTEM 4
 
 / {
     combos {
@@ -62,6 +63,7 @@
 // |     | _LALT | _LSHIFT | _LCTRL | _LGUI | _SYMLR  |          | _SYMLR | _RGUI | _RCTRL | _RSHIFT | _LALT |     |
 // ----------------------------------------------------          ---------------------------------------------------
 // |     |   Z   |    X    |   C    |   V   |    B    |          |   N    |   M   |    ,   |    .    |   -   |     |
+// |     |       |         |        |       | _SYSLR  |          |        |       |        |         |       |     |
 // ----------------------------------------------------          ---------------------------------------------------
 //                         |  MOVE  | ENTER |   TAB   |          |  BSPC  | SPACE | ALT GR |
 //                         |        |       | _NUMPAD |          |        |       |        |
@@ -72,7 +74,7 @@
 
         &trans &hml LALT NO_A &hml LSHIFT NO_S &hml LCTRL NO_D &hml LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &hmr RGUI NO_J &hmr RCTRL NO_K &hmr RSHIFT NO_L &hmr LALT NO_O_SLASH &kp NO_AE
 
-                                          &trans &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &kp NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &trans
+                                   &trans &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &lt SYSTEM NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &trans
 
                                                             &mo FNMOVE &kp RET &lt NUMPAD TAB            &kp BSPC &kp NO_SPACE &kp RALT
 
@@ -150,6 +152,30 @@
 &trans &trans &trans &trans &trans &trans           &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
 
 &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+
+                     &trans &trans &trans           &trans &trans &trans
+            >;
+        };
+
+        system_layer {
+            display-name = "SYSTEM";
+
+// --------------------------------------          ------------------------------------------
+// | CLR  |     |     |     |     |     |          |      |      |      |       |     |     |
+// --------------------------------------          ------------------------------------------
+// |      |     |     |     |     |     |          |      |  P4  |  P5  |       |     |     |
+// --------------------------------------          ------------------------------------------
+// |      |     |     |     |     |     |          |      |  P1  |  P2  |  P3   |     |     |
+// --------------------------------------          ------------------------------------------
+//                    |     |     |     |          |      |      |      |
+//                    -------------------          ----------------------
+            bindings = <
+
+&bt BT_CLR &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans
 
                      &trans &trans &trans           &trans &trans &trans
             >;
