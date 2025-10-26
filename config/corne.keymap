@@ -14,6 +14,7 @@
 #define SYMBOL 2
 #define FNMOVE 3
 #define SYSTEM 4
+#define MEDIA 5
 
 / {
     combos {
@@ -58,6 +59,7 @@
 
 // ----------------------------------------------------          ---------------------------------------------------
 // | ESC |   Q   |    W    |   E    |   R   |    T    |          |   Y    |   U   |    I   |    O    |   P   |  Å  |
+// |     |       |         |        |       | _MEDLR  |          |        |       |        |         |       |     |
 // ----------------------------------------------------          ---------------------------------------------------
 // |     |   A   |    S    |   D    |   F   |    G    |          |   H    |   J   |    K   |    L    |   Ø   |  Æ  |
 // |     | _LALT | _LSHIFT | _LCTRL | _LGUI | _SYMLR  |          | _SYMLR | _RGUI | _RCTRL | _RSHIFT | _LALT |     |
@@ -70,7 +72,7 @@
 //                         ----------------------------          ---------------------------
            bindings = <
 
-                                         &kp ESC &kp NO_Q &kp NO_W &kp NO_E &kp NO_R &kp NO_T            &kp NO_Y &kp NO_U &kp NO_I &kp NO_O &kp NO_P &kp NO_A_RING
+                                   &kp ESC &kp NO_Q &kp NO_W &kp NO_E &kp NO_R &lt MEDIA NO_T            &kp NO_Y &kp NO_U &kp NO_I &kp NO_O &kp NO_P &kp NO_A_RING
 
         &trans &hml LALT NO_A &hml LSHIFT NO_S &hml LCTRL NO_D &hml LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &hmr RGUI NO_J &hmr RCTRL NO_K &hmr RSHIFT NO_L &hmr LALT NO_O_SLASH &kp NO_AE
 
@@ -173,9 +175,33 @@
 
 &bt BT_CLR &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
 
-&trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans
 
-&trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans
+    &trans &trans &trans &trans &trans &trans           &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans
+
+                         &trans &trans &trans           &trans &trans &trans
+            >;
+        };
+
+        media_layer {
+            display-name = "MEDIA";
+
+// --------------------------------------          -------------------------------------------
+// |      |     |     |     |     |     |          |      | vol_d | mute | vol_u |     |     |
+// --------------------------------------          -------------------------------------------
+// |      |     |     |     |     |     |          | rew  | next  | prev |  ff   |     |     |
+// --------------------------------------          -------------------------------------------
+// |      |     |     |     |     |     |          |      |       | play |       |     |     |
+// --------------------------------------          -------------------------------------------
+//                    |     |     |     |          |      |       |       |
+//                    -------------------          ------------------------
+            bindings = <
+
+&trans &trans &trans &trans &trans &trans           &trans &kp K_VOLUME_DOWN &kp K_MUTE &kp K_VOLUME_UP &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &kp C_REWIND &kp K_NEXT &kp K_PREV &kp C_FAST_FORWARD &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &trans &trans &kp K_PLAY_PAUSE &trans &trans &trans
 
                      &trans &trans &trans           &trans &trans &trans
             >;
