@@ -13,8 +13,9 @@
 #define NUMPAD 1
 #define SYMBOL 2
 #define FNMOVE 3
-#define SYSTEM 4
-#define MEDIA 5
+#define PAGE 4
+#define SYSTEM 5
+#define MEDIA 6
 
 / {
     combos {
@@ -22,7 +23,12 @@
         combo_double_shift {
             timeout-ms = <50>;
             key-positions = <14 21>; // Position of left shift and right shift
-            bindings = <&kp LSHIFT>, <&kp LSHIFT>;
+            bindings = <&kp LSHIFT>;
+        };
+        combo_super_alt {
+            timeout-ms = <50>;
+            key-positions = <13 16>; // Position of left alt and left gui
+            bindings = <&mo PAGE>;
         };
     };
 
@@ -152,6 +158,31 @@
 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6           &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
 
 &trans &trans &trans &trans &trans &trans           &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+
+                     &trans &trans &trans           &trans &trans &trans
+            >;
+        };
+
+
+        page_layer {
+            display-name = "PAGE";
+
+// --------------------------------------          ------------------------------------------
+// |      |     |     |     |     |     |          |      |      |      |       |     |     |
+// --------------------------------------          ------------------------------------------
+// |      |     |     |     |     |     |          | HOME | P DN | P UP | END   |     |     |
+// --------------------------------------          ------------------------------------------
+// |      |     |     |     |     |     |          |      |      |      |       |     |     |
+// --------------------------------------          ------------------------------------------
+//                    |     |     |     |          |      |      |      |
+//                    -------------------          ----------------------
+            bindings = <
+
+&trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+
+&trans &trans &trans &trans &trans &trans           &kp HOME &kp PAGE_DOWN &kp PAGE_UP &kp END &trans &trans
 
 &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
 
