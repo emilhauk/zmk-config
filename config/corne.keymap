@@ -71,9 +71,9 @@
 // |     | _LALT | _LSHIFT | _LCTRL | _LGUI | _SYMLR  |          | _SYMLR | _RGUI | _RCTRL | _RSHIFT | _LALT |     |
 // ----------------------------------------------------          ---------------------------------------------------
 // |     |   Z   |    X    |   C    |   V   |    B    |          |   N    |   M   |    ,   |    .    |   -   |     |
-// |     |       |         |        |       | _SYSLR  |          |        |       |        |         |       |     |
+// |     |       |         |        | _MOVE | _SYSLR  |          |        |       |        |         |       |     |
 // ----------------------------------------------------          ---------------------------------------------------
-//                         |  MOVE  | ENTER |   TAB   |          |  BSPC  | SPACE | ALT GR |
+//                         |        | ENTER |   TAB   |          |  BSPC  | SPACE | ALT GR |
 //                         |        |       | _NUMPAD |          |        |       |        |
 //                         ----------------------------          ---------------------------
            bindings = <
@@ -82,9 +82,9 @@
 
         &trans &hml LALT NO_A &hml LSHIFT NO_S &hml LCTRL NO_D &hml LGUI NO_F &lt SYMBOL NO_G            &lt SYMBOL NO_H &hmr RGUI NO_J &hmr RCTRL NO_K &hmr RSHIFT NO_L &hmr LALT NO_O_SLASH &kp NO_AE
 
-                                   &trans &kp NO_Z &kp NO_X &kp NO_C &kp NO_V &lt SYSTEM NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &trans
+                                   &trans &kp NO_Z &kp NO_X &kp NO_C &lt FNMOVE NO_V &lt SYSTEM NO_B            &kp NO_N &kp NO_M &kp NO_COMMA &kp NO_DOT &kp NO_MINUS &trans
 
-                                                            &mo FNMOVE &kp RET &lt NUMPAD TAB            &kp BSPC &kp NO_SPACE &kp RALT
+                                                            &none &kp RET &lt NUMPAD TAB            &kp BSPC &kp NO_SPACE &kp RALT
 
             >;
 
